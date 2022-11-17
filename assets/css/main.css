@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* setting background image */
+.container{
+    height: 100vh;
+}
+
+/* making radio input invisible */
+.container input{
+    display: none;
+}
+
+.container h2{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #2c4964;
+    font-weight: 700;
+}
+
+/* setting place for the label or navbar */
+.top-content{
+    display: flex;
+    position: relative;
+    width: 70%;
+    height: 30px;
+    margin: 0 auto;
+    background-color: #5392cc;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(54, 54, 54);
+    border-width: thin;
+    box-shadow: 2px 2px 5px;
+}
+.labels label{
+    cursor: pointer;
+    color: #d1c8c8;
+    transition: .5s;
+    font-weight: 700;
+}
+.labels label:hover{
+    color: white;
+}
+
+.img-gallery{
+    position: absolute;
+    left: 0px;
+    width: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.event-gallery{
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* setting place for the image gallery */
+.img-gallery-place{
+    position: relative;
+    padding-top: 25px;
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px; */
+    width: 80%;
+    height: 20vh;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.img-place{
+    border-radius: 5px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url(/assets/images/pexels-pixabay-206359.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate{
+    25%{
+        background-image: url(/assets/images/785868.png);
+        background-size: cover;
+    }
+    50%{
+        background-image: url(/assets/images/backgroundImg.jpg);
+        background-size: cover;
+    }
+    75%{
+        background-image: url(/assets/images/wp9651688-clean-aesthetic-laptop-wallpapers.jpg);
+        background-size: cover;
+    }
+    100%{
+        background-image: url(/assets/images/nature-3082832_960_720.jpg);
+        background-size: cover;
+    }
+}
+
+.for-gallery{
+    position: relative;
+}
+
+.for-a{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px;
+}
+.for-gallery a{
+    text-decoration: none;
+    padding: 3px 3px;
+    color: rgb(34, 33, 33);
+    /* background-color: rgb(126, 124, 124); */
+    border-radius: 5px;
+    border-style: solid;
+}
+
+/* starting of event-gallery  */
+.event-gallery-place{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.event-place{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.event-place details{
+    text-decoration: none;
+}
+
+.images{
+    max-width: 90%;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+}
+.event-place img{
+    width: 100%;
+}
+
+#selector1:checked ~ .for-gallery{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#selector1:checked ~ .event-gallery-place{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+
+#selector2:checked ~ .event-gallery-place{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#selector2:checked ~ .for-gallery{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+
+
+/* for desktop view */
+@media only screen and (min-width: 1000px){
+    .img-gallery-place{
+        position: relative;
+        padding-top: 25px;
+        width: 50%;
+        height: 45vh;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+    .event-gallery-place{
+        width: 30%;
+        margin: 20px auto;
+    }
+}
